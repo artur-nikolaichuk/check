@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link rel="shordcut icon" href="img/pizza.png">
+    <title>Delivery Food</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <script src="js\wow.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="progressBar"></div>
+    <div id="progressBarContainer"></div>
+    <div class="loader-container">
+        <div class="loader"></div>
+    </div>
+    
+    <div class="container">
+        <header style="flex-wrap: wrap;" class="wow fadeInDown ">
+            <a href="index.html"> <img src="img/logo.svg" alt="logo" class="logo animated"></a>
+            <input type="text" class="search-input input" placeholder="Адреса доставки">
+            <div class="buttons">
+                <button class="button button-primary">
+                    <img src="img/user.svg" alt="user" class="button-icon">
+                   <span class="button-text"></span>
+                   Увійти</span>
+                </button>
+                <button class="button" id="cart-button">
+                    <img src="img/shopping-cart.svg" alt="shopping-cart" class="button-icon">
+                    <span class="button-text"></span>
+                    Кошик</span>
+            </div>
+        </header>
+       
+    </div>
+    <main class="main">
+        <div class="container">
+            <section class="promo">
+                <h1 class="promo-title">Онлайн-сервіс<br>доставки їжі додому</h1>
+                <p class="promo-text">
+                    Страви з улюбленого ресторану привезе кур'єр в рукавичках, масці і з антисептиком
+                </p>
+            </section>
+            <center>
+            <section class="rec">
+                <div class="rest-rec">
+                   <div class="kruh"> <img src="img/search.png" class="rec_img"></div>
+                    <p>
+                        Вибери улюблений ресторан</p>
+                </div>
+                <div class="rest-rec">
+                   <div class="kruh"> <img src="img/chef (1).png" class="rec_img"></div>
+                    <p>
+                        Знайди, що тобі<br> за смаком</p>
+                </div>
+                <div class="rest-rec">
+                   <div class="kruh"> <img src="img/food.png" class="rec_img"></div>
+                    <p>Замовляй і<br>насолоджуйся!</p>
+                </div>
+            </section></center>
+            <section class="restorans">
+                <div class="section-heading">
+                    <h2 class="section-title">Ресторани</h2>
+                    <input type="text" class="input-section" placeholder="Пошук страв і ресторанів">
+                </div>
+                <div class="cards">
+                    <a target="_blank"  class="card wow fadeInLeft">
+                        <img src="img/16324.jpg" alt="img" class="card-image">
+                        <div class="card-text">
+                            <div class="card-heading">
+                                <h3  style="color: #000;" class="card-title">Піца плюс</h3>
+                                <span class="card-tag tag">50 хв</span>
+                            </div>
+    
+                            <div class="card-info">
+                                <div class="rating">
+                                    <img src="img/star.svg" alt="star" class="star">
+                                    4.5</div>
+                                <div class="price">Від 400₴</div>
+                                <div class="category">Піцца</div>
+                            </div>
+                        </div>
+                    </a>
+                    <a target="_blank"  class="card wow fadeInUp">
+                        <img src="img/image_2.jpg" alt="img" class="card-image">
+                        <div class="card-text">
+                            <div class="card-heading">
+                                <h3  style="color: #000;" class="card-title">Танукі</h3>
+                                <span class="card-tag tag">50 хв</span>
+                            </div>
+    
+                            <div class="card-info">
+                                <div class="rating">
+                                    <img src="img/star.svg" alt="star" class="star">4.5</div>
+                                <div class="price">Від 350₴</div>
+                                <div class="category">Суші</div>
+                            </div>
+                        </div>
+                    </a>
+                    <a target="_blank"  class="card wow fadeInRight">
+                        <img src="img/image_3.jpg" alt="img" class="card-image">
+                        <div class="card-text">
+                            <div class="card-heading">
+                                <h3  style="color: #000;" class="card-title">FoodBand</h3>
+                                <span class="card-tag tag">50 хв</span>
+                            </div>
+    
+                            <div class="card-info">
+                                <div class="rating">
+                                    <img src="img/star.svg" alt="star" class="star">4.5</div>
+                                <div class="price">Від 380₴</div>
+                                <div class="category">Піца</div>
+                            </div>
+                        </div>
+                    </a>
+                    <a target="_blank"  class="card wow fadeInLeft">
+                        <img src="img/image_4.jpg" alt="img" class="card-image">
+                        <div class="card-text">
+                            <div class="card-heading">
+                                <h3  style="color: #000;" class="card-title">Жадина-піца</h3>
+                                <span class="card-tag tag">50 хв</span>
+                            </div>
+    
+                            <div class="card-info">
+                                <div class="rating">
+                                    <img src="img/star.svg" alt="star" class="star">4.5</div>
+                                <div class="price">Від 400₴</div>
+                                <div class="category">Піца, суші</div>
+                            </div>
+                        </div>
+                    </a>
+                    <a target="_blank" class="card wow fadeInUp">
+                        <img src="img/image_5.jpg" alt="img" class="card-image">
+                        <div class="card-text">
+                            <div class="card-heading">
+                                <h3  style="color: #000;" class="card-title">
+                                    Точка їжі</h3>
+                                <span class="card-tag tag">50 хв</span>
+                            </div>
+    
+                            <div class="card-info">
+                                <div class="rating">
+                                    <img src="img/star.svg" alt="star" class="star">4.5</div>
+                                <div class="price">Від 400₴</div>
+                                <div class="category">Суші</div>
+                            </div>
+                        </div>
+                    </a>
+                    <a target="_blank" class="card wow fadeInRight">
+                        <img src="img/image_6.jpg" alt="img" class="card-image">
+                        <div class="card-text">
+                            <div class="card-heading">
+                                <h3 style="color: #000;" class="card-title">PizzaBurger</h3>
+                                <span class="card-tag tag">50 хв    </span>
+                            </div>
+    
+                            <div class="card-info">
+                                <div class="rating">
+                                    <img src="img/star.svg" alt="star" class="star">4.5</div>
+                                <div class="price">Від 450₴</div>
+                                <div class="category">Піца, суші</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </section>
+            <section class="promo" id="promo-bottom">
+                <h1 class="promo-title">
+                    Найпопулярніше в<br> вашому місті</h1>
+                <p class="promo-text">
+                    Ознайомтеся з найпопулярнішими магазинами — ми доставимо <br>вам все, що побажаєте
+                </p>
+            </section>
+            <br>
+            <div class="cards">
+                <a target="_blank" href="https://www.kfc-ukraine.com/" class="card wow fadeInLeft">
+                    <img src="img/kfc.jpeg" alt="img" class="card-image">
+                    <div class="card-text">
+                        <div class="card-heading">
+                            <h3 style="color: #000;" class="card-title">KFC</h3>
+                            <div class="rating" id="rating-2">
+                                <img src="img/star.svg" alt="star" class="star">5</div>
+                        </div>
+                    </div>
+                </a>
+                <a target="_blank" href="https://www.tarantino-family.com/delivery/murakami/" class="card wow fadeInUp">
+                    <img src="img/sushi.jpg" alt="img" class="card-image">
+                    <div class="card-text">
+                        <div class="card-heading">
+                            <h3 style="color: #000;" class="card-title">Murakami</h3>
+                            <div class="rating" id="rating-2">
+                                <img src="img/star.svg" alt="star" class="star">4.5</div>
+                        </div>
+                    </div>
+                </a>
+                <a target="_blank" href="https://www.papajohns.ru/moscow/" class="card wow fadeInRight">
+                    <img src="img/pizza-foto.jpg" alt="img" class="card-image">
+                    <div class="card-text">
+                        <div class="card-heading">
+                            <h3 style="color: #000;" class="card-title">Papa John</h3>
+                            <div class="rating" id="rating-2">
+                                <img src="img/star.svg" alt="star" class="star">5</div>
+                        </div>
+                    </div>
+                </a>
+                <a target="_blank" href="https://mafia.ua/kiev/menu-dostavki/pizza?gclid=CjwKCAjw7e_0BRB7EiwAlH-goASpQORhb6zb5X5Y_vzAIGgpKkiFzDJYWZUghil6RYDzHPgVm63xrBoCCA0QAvD_BwE" class="card wow fadeInLeft">
+                    <img src="img/pizza_mafia.jpg" alt="img" class="card-image">
+                    <div class="card-text">
+                        <div class="card-heading">
+                            <h3 style="color: #000;" class="card-title">Mafia</h3>
+                            <div class="rating" id="rating-2">
+                                <img src="img/star.svg" alt="star" class="star">4.5</div>
+                        </div>
+                    </div>
+                </a>
+                <a target="_blank" href="https://www.mcdonalds.ua/ua.html" class="card wow fadeInUp">
+                    <img src="img/mc.jpg" alt="img" class="card-image">
+                    <div class="card-text">
+                        <div class="card-heading">
+                            <h3 style="color: #000;" class="card-title">McDonalds</h3>
+                            <div class="rating" id="rating-2">
+                                <img src="img/star.svg" alt="star" class="star">4.5</div>
+                        </div>
+                    </div>
+                </a>
+                <a target="_blank" href="https://www.bk.com/" class="card wow fadeInRight">
+                    <img src="img/BK.jpg" alt="img" class="card-image">
+                    <div class="card-text">
+                        <div class="card-heading">
+                            <h3 style="color: #000;" class="card-title">BURGER KING</h3>
+                            <div class="rating" id="rating-2">
+                                <img src="img/star.svg" alt="star" class="star">5</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="section-heading">
+                <h2 class="section-title">Нове</h2>
+                <input type="text" class="input-section" placeholder="Пошук ресторанів">
+            </div>
+            <div class="cards">
+                <a target="_blank" href="https://www.subway.com/en-US" class="card wow fadeInLeft">
+                    <img src="img/hot-dog.jpg" alt="img" class="card-image">
+                    <div class="card-text">
+                        <div class="card-heading">
+                            <h3 style="color: #000;" class="card-title">Subway</h3>
+                            <div class="rating" id="rating-2">
+                                <img src="img/new.png" alt="star" class="star new"></div>
+                        </div>
+                    </div>
+                </a>
+                <a target="_blank" href="https://mamamia.ua/ua" class="card wow fadeInUp">
+                    <img src="img/pizza-stock.jpg" alt="img" class="card-image">
+                    <div class="card-text">
+                        <div class="card-heading">
+                            <h3 style="color: #000;" class="card-title">Mamamia!</h3>
+                            <div class="rating" id="rating-2">
+                                <img src="img/new.png" alt="star" class="star new"></div>
+                        </div>
+                    </div>
+                </a>
+                <a target="_blank" href="https://www.starburger.ua/ru/" class="card wow fadeInRight">
+                    <img src="img/sn.jpg" alt="img" class="card-image">
+                    <div class="card-text">
+                        <div class="card-heading">
+                            <h3 style="color: #000;" class="card-title">STAR★BURGER</h3>
+                            <div class="rating" id="rating-2">
+                                <img src="img/new.png" alt="star" class="star new"></div>
+                        </div>
+                    </div>
+                </a>
+                <a target="_blank" href="https://sushiya.ua/" class="card wow fadeInLeft">
+                    <img src="img/sushia.jpeg" alt="img" class="card-image">
+                    <div class="card-text">
+                        <div class="card-heading">
+                            <h3 style="color: #000;" class="card-title">Сушия</h3>
+                            <div class="rating" id="rating-2">
+                                <img src="img/new.png" alt="star" class="star new"></div>
+                        </div>
+                    </div>
+                </a>
+                <a target="_blank" href="https://sushiya.ua/" class="card wow fadeInUp">
+                    <img src="img/ev.jpg" alt="img" class="card-image">
+                    <div class="card-text">
+                        <div class="card-heading">
+                            <h3 style="color: #000;" class="card-title">Евразия</h3>
+                            <div class="rating" id="rating-2">
+                                <img src="img/new.png" alt="star" class="star new"></div>
+                        </div>
+                    </div>
+                </a>
+                <a target="_blank" href="https://www.starbucks.com/" class="card wow fadeInRight">
+                    <img src="img/starbucks.jpg" alt="img" class="card-image">
+                    <div class="card-text">
+                        <div class="card-heading">
+                            <h3 style="color: #000;" class="card-title">Starbucks</h3>
+                            <div class="rating" id="rating-2">
+                                <img src="img/new.png" alt="star" class="star new"></div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="section-heading">
+                <h2 class="section-title">Наше меню</h2>
+                <input type="text" class="input-section" placeholder="Поиск блюд">
+            </div>
+            <hr id="none-hr">
+            <menu>
+                <a href="#burg" style="color: black;"> <div>
+                    <img src="img/burger.png">
+                    <p>Бургеры</p>
+                </div></a>
+                <a href="#zak" style="color: black;">  <div>
+                    <img src="img/snack.png">
+                    <p>Закуски</p>
+                </div></a>
+                <a href="#com" style="color: black;"> <div>
+                    <img src="img/burger (1).png">
+                    <p>COMBO</p>
+                </div></a>
+                <a href="#nap" style="color: black;"><div>
+                    <img src="img/pepsi.png">
+                    <p>Напитки</p>
+                </div></a>
+                <a href="#sau" style="color: black;">   <div>
+                    <img src="img/salad.png">
+                    <p>Салаты</p>
+                </div></a>
+            </menu>
+            <hr id="burg">
+            <div class="cards">
+                <div class="card wow fadeInLeft card-2">
+                    <img src="img/Monster-_430-min.jpg" alt="img" class="card-image">
+                    <div class="card-text">
+                        <div class="card-heading">
+                            <h3 class="card-title card-title-reg">Monster-Бургер</h3>
+                        </div>
+
+                        <div class="card-info">
+                            <div class="ingredients">Котлета яловича, бекон, сыр Чеддер, лист салата Айсберг.</div>
+                        </div>
+                        <div class="card-buttons">
+                            <button class="button button-primary">
+                                <span class="button-card-text">В корзину</span>
+                                <img src="img/shopping-card-white.svg" alt="shopping-cart" class="button-card-img">
+                            </button>
+                            <strong class="card-price-bold">390₽</strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="card wow fadeInUp card-2">
+                    <img src="img/Double-_XL_385-min.jpg" alt="img" class="card-image">
+                    <div class="card-text">
+                        <div class="card-heading">
+                            <h3 class="card-title card-title-reg">Double-Чизбургер XL</h3>
+                        </div>
+
+                        <div class="card-info">
+                            <div class="ingredients">Двойная говяжья котлета, двойной сыр чеддер, огурчик маринованный.</div>
+                        </div>
+                        <div class="card-buttons">
+                            <button class="button button-primary">
+                                <span class="button-card-text">В корзину</span>
+                                <img src="img/shopping-card-white.svg" alt="shopping-cart" class="button-card-img">
+                            </button>
+                            <strong class="card-price-bold">320₽</strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="card wow fadeInRight card-2">
+                    <img src="img/Diablo-_300-min.jpg" alt="img" class="card-image">
+                    <div class="card-text">
+                        <div class="card-heading">
+                            <h3 class="card-title card-title-reg">Diablo-Бургер</h3>
+                        </div>
+
+                        <div class="card-info">
+                            <div class="ingredients">
+                                Котлета говяжья, сыр чеддер, кусочки свежих томатов, Паперони.</div>
+                        </div>
+                        <div class="card-buttons">
+                            <button class="button button-primary">
+                                <span class="button-card-text">В корзину</span>
+                                <img src="img/shopping-card-white.svg" alt="shopping-cart" class="button-card-img">
+                            </button>
+                            <strong class="card-price-bold">290₽</strong>
+                        </div>
+                    </div>
+                </div>
+                <hr id="zak">
+                <div class="card wow fadeInLeft card-2">
+                    <img src="img/__10-min.jpg" alt="img" class="card-image">
+                    <div class="card-text">
+                        <div class="card-heading">
+                            <h3 class="card-title card-title-reg">Сырные шарики</h3>
+                        </div>
+
+                        <div class="card-info">
+                            <div class="ingredients">
+                                Три вида сыра в одном шарике</div>
+                        </div>
+                        <div class="card-buttons">
+                            <button class="button button-primary">
+                                <span class="button-card-text">В корзину</span>
+                                <img src="img/shopping-card-white.svg" alt="shopping-cart" class="button-card-img">
+                            </button>
+                            <strong class="card-price-bold">130₽</strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="card wow fadeInUp card-2">
+                    <img src="img/__GO_6-min.jpg" alt="img" class="card-image">
+                    <div class="card-text">
+                        <div class="card-heading">
+                            <h3 class="card-title card-title-reg">Чикен Нагетс Go</h3>
+                        </div>
+
+                        <div class="card-info">
+                            <div class="ingredients">
+                               Куриные нагетсы - 6 штук</div>
+                        </div>
+                        <div class="card-buttons">
+                            <button class="button button-primary">
+                                <span class="button-card-text">В корзину</span>
+                                <img src="img/shopping-card-white.svg" alt="shopping-cart" class="button-card-img">
+                            </button>
+                            <strong class="card-price-bold">100₽</strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="card wow fadeInRight card-2">
+                    <img src="img/__130-min.jpg" alt="img" class="card-image">
+                    <div class="card-text">
+                        <div class="card-heading">
+                            <h3 class="card-title card-title-reg">Картофельные дипы</h3>
+                        </div>
+
+                        <div class="card-info">
+                            <div class="ingredients">
+                                Картофельные дипы</div>
+                        </div>
+                        <div class="card-buttons">
+                            <button class="button button-primary">
+                                <span class="button-card-text">В корзину</span>
+                                <img src="img/shopping-card-white.svg" alt="shopping-cart" class="button-card-img">
+                            </button>
+                            <strong class="card-price-bold">90₽</strong>
+                        </div>
+                    </div>
+                </div>
+                <hr id="com">
+                <div class="card wow fadeInLeft card-2">
+                    <img src="img/Lunch_time__-min.jpg" alt="img" class="card-image">
+                    <div class="card-text">
+                        <div class="card-heading">
+                            <h3 class="card-title card-title-reg">
+                                Lunch time для друзей</h3>
+                        </div>
+
+                        <div class="card-info">
+                            <div class="ingredients">
+                                5 гамбургеров L, 3 картопляи фри, 2 соусы Паприк, Кока-кола 1,0 л.</div>
+                        </div>
+                        <div class="card-buttons">
+                            <button class="button button-primary">
+                                <span class="button-card-text">В корзину</span>
+                                <img src="img/shopping-card-white.svg" alt="shopping-cart" class="button-card-img">
+                            </button>
+                            <strong class="card-price-bold">800₽</strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="card wow fadeInUp card-2">
+                    <img src="img/Big-Boy_-min.jpg" alt="img" class="card-image">
+                    <div class="card-text">
+                        <div class="card-heading">
+                            <h3 class="card-title card-title-reg">
+                                Big-Boy меню</h3>
+                        </div>
+
+                        <div class="card-info">
+                            <div class="ingredients">
+                                Big-Boy бургер, крокеты, соус сырный, Кока-кола 0,33 л.</div>
+                        </div>
+                        <div class="card-buttons">
+                            <button class="button button-primary">
+                                <span class="button-card-text">В корзину</span>
+                                <img src="img/shopping-card-white.svg" alt="shopping-cart" class="button-card-img">
+                            </button>
+                            <strong class="card-price-bold">400₽</strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="card wow fadeInRight card-2">
+                    <img src="img/_-min.jpg" alt="img" class="card-image">
+                    <div class="card-text">
+                        <div class="card-heading">
+                            <h3 class="card-title card-title-reg">
+                                Чизбургер меню</h3>
+                        </div>
+
+                        <div class="card-info">
+                            <div class="ingredients">
+                                Чизбургер L, сырные палочки, соус Паприк, Спрайт 0,33 л.</div>
+                        </div>
+                        <div class="card-buttons">
+                            <button class="button button-primary">
+                                <span class="button-card-text">В корзину</span>
+                                <img src="img/shopping-card-white.svg" alt="shopping-cart" class="button-card-img">
+                            </button>
+                            <strong class="card-price-bold">400₽</strong>
+                        </div>
+                    </div>
+                </div>
+                <hr id="nap">
+                <div class="card wow fadeInLeft card-2">
+                    <img src="img/CocaCola.png" alt="img" class="card-image">
+                    <div class="card-text">
+                        <div class="card-heading">
+                            <h3 class="card-title card-title-reg">
+                                Напиток "Кока-кола" 0,33 л</h3>
+                        </div>
+
+                        <div class="card-info">
+                            <div class="ingredients">
+                                Напиток "Coca-Cola"</div>
+                        </div>
+                        <div class="card-buttons">
+                            <button class="button button-primary">
+                                <span class="button-card-text">В корзину</span>
+                                <img src="img/shopping-card-white.svg" alt="shopping-cart" class="button-card-img">
+                            </button>
+                            <strong class="card-price-bold">50₽</strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="card wow fadeInUp card-2">
+                    <img src="img/fanta.png" alt="img" class="card-image">
+                    <div class="card-text">
+                        <div class="card-heading">
+                            <h3 class="card-title card-title-reg">
+                                Напиток "Fanta" 0,33 л</h3>
+                        </div>
+
+                        <div class="card-info">
+                            <div class="ingredients">
+                                Напиток "Fanta"</div>
+                        </div>
+                        <div class="card-buttons">
+                            <button class="button button-primary">
+                                <span class="button-card-text">В корзину</span>
+                                <img src="img/shopping-card-white.svg" alt="shopping-cart" class="button-card-img">
+                            </button>
+                            <strong class="card-price-bold">50₽</strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="card wow fadeInRight card-2">
+                    <img src="img/sprite.png" alt="img" class="card-image">
+                    <div class="card-text">
+                        <div class="card-heading">
+                            <h3 class="card-title card-title-reg">
+                                Напиток "Sprite" 0,33 л</h3>
+                        </div>
+
+                        <div class="card-info">
+                            <div class="ingredients">
+                                Напиток "Sprite"</div>
+                        </div>
+                        <div class="card-buttons">
+                            <button class="button button-primary">
+                                <span class="button-card-text">В корзину</span>
+                                <img src="img/shopping-card-white.svg" alt="shopping-cart" class="button-card-img">
+                            </button>
+                            <strong class="card-price-bold">50₽</strong>
+                        </div>
+                    </div>
+                </div>
+                <hr id="sau">
+                <div class="card wow fadeInLeft card-2">
+                    <img src="img/______225-min.jpg" alt="img" class="card-image">
+                    <div class="card-text">
+                        <div class="card-heading">
+                            <h3 class="card-title card-title-reg">
+                                Салат овощной</h3>
+                        </div>
+
+                        <div class="card-info">
+                            <div class="ingredients">                       
+                    Микс салата, томаты, перец болгарский, сыр Халуми</div>
+                        </div>
+                        <div class="card-buttons">
+                            <button class="button button-primary">
+                                <span class="button-card-text">В корзину</span>
+                                <img src="img/shopping-card-white.svg" alt="shopping-cart" class="button-card-img">
+                            </button>
+                            <strong class="card-price-bold">250₽</strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="card wow fadeInUp card-2">
+                    <img src="img/____250-min.jpg" alt="img" class="card-image">
+                    <div class="card-text">
+                        <div class="card-heading">
+                            <h3 class="card-title card-title-reg">
+                                Салат с авокадо</h3>
+                        </div>
+
+                        <div class="card-info">
+                            <div class="ingredients">                       
+                                Микс салата, авокадо, филе томатов, заправленные оливковым маслом.</div>
+                        </div>
+                        <div class="card-buttons">
+                            <button class="button button-primary">
+                                <span class="button-card-text">В корзину</span>
+                                <img src="img/shopping-card-white.svg" alt="shopping-cart" class="button-card-img">
+                            </button>
+                            <strong class="card-price-bold">300₽</strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="card wow fadeInRight card-2">
+                    <img src="img/sh.jpg" alt="img" class="card-image">
+                    <div class="card-text">
+                        <div class="card-heading">
+                            <h3 class="card-title card-title-reg">
+                                Салат Шанхайский</h3>
+                        </div>
+
+                        <div class="card-info">
+                            <div class="ingredients">                       
+                                Морская капуста, микс салата, свежий перец болгарский</div>
+                        </div>
+                        <div class="card-buttons">
+                            <button class="button button-primary">
+                                <span class="button-card-text">В корзину</span>
+                                <img src="img/shopping-card-white.svg" alt="shopping-cart" class="button-card-img">
+                            </button>
+                            <strong class="card-price-bold">200₽</strong>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+            </div>
+            <div class="section-heading">
+                <h2 class="section-title">Акции</h2>
+                <input type="text" class="input-section" placeholder="Поиск акций">
+            </div>
+    <div class="faq">
+        <div class="faq-item">
+            <input class="faq-input" type="checkbox" id="faq_1">
+            <label class="faq-title" for="faq_1">
+                "Самовывоз всегда -20%"</label>
+            <div class="faq-text">
+                <p>
+                    Забирай свой заказ сам и получай скидку в 20%</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <input class="faq-input" type="checkbox" id="faq_2">
+            <label class="faq-title" for="faq_2">"День рождения -20%"</label>
+            <div class="faq-text">
+                <p>Угощай своих друзей выгодно, получи 20% скидки в День рождения</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <input class="faq-input" type="checkbox" id="faq_3">
+            <label class="faq-title" for="faq_3">"Бонус +"</label>
+            <div class="faq-text">
+                <p>На каждые потраченных 10₽ мы начисляем один бонусный рубль, которыми вы можете оплатить до 30% в следующем заказ</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <input class="faq-input" type="checkbox" id="faq_4">
+            <label class="faq-title" for="faq_4">"На троих"</label>
+            <div class="faq-text">
+                <p>
+                    К двум COMBO меню Третьей идет в подарок (в подарок идет меню с наименьшей ценой из двух заказанных)</p>
+            </div>
+        </div>
+    </div>
+
+                <section class="promo" id="promo-bottom-4">
+                    <h1 class="promo-title">Delivery<b style="color:red;">Buisness</b></h1>
+                    <p class="promo-text">
+                        Лучший способ настроить и организовать доставку для вашей компании.
+                    </p>
+                </section>
+                <div class="info" id="kur">
+            <div class="box">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <div class="content-box"><img class="bike" src="img/delivery-bike.png"><h1>Курьерам</h1>
+                <p>Присоединяйся к команде Delivery Food и получай стабильный доход! Работай по удобному графику на собственном авто, велосипеде или пешком, выбор за тобой!</p>
+                </div>
+            </div>
+            </div>
+            <div style="margin-top: 450px;" class="info" id="rest">
+                <div class="box">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <div class="content-box"><img class="bike" src="img/fast-food.png"><h1>Ресторанам</h1>
+                    <p>
+                        Увеличивайте количество заказов и прибыль с Delivery Food! Тысячи пользователей смогут заказать еду с вашего ресторана и смаковать любимые блюда еще и дома.</p>
+                    </div>
+                </div>
+                </div>
+                    <div style="margin-top: 450px;" class="info" id="vak">
+                        <div class="box">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <div class="content-box" style="line-height: 190%;"><img style="width: 80px;height: 80px;" class="bike" src="img/united.png"><h1>Вакансии</h1>
+                            <p>
+                                Мы создаем революцию в одной из самых конкурентных сфер. Тебе нужно лишь    желание. Присоединяйся и раскрой талант!
+                            </p>
+                            </div>
+                        </div>
+                        </div>
+                        <div style="margin-top: 450px;" class="info" id="contact">
+                            <div class="box">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <div class="content-box" style="line-height: 190%;"><img style="width: 80px;height: 80px;" class="bike" src="img/help.png"><h1>Контакты</h1>
+                                <p>
+                                    +380 93 194 09 60<img  style="width: 25px; height: 25px; vertical-align: middle; margin-left: 10px; margin-top: -3px;" src="img/ukraine.png"><br>
+                                    +8 800 600 12 10<img  style="width: 25px; height: 25px; vertical-align: middle; margin-left: 20px; margin-top: -3px;" src="img/russia.png"><br>
+                                    8 10 44 7871234567<img  style="width: 25px; height: 25px; vertical-align: middle; margin-left: 10px; margin-top: -3px;" src="img/england.png"><br>
+                                    8-10-1-212-123 45 67<img  style="width: 25px; height: 25px; vertical-align: middle; margin-left: 10px; margin-top: -3px;" src="img/usa-today.png"><br>
+                                </p>
+                                </div>
+                            </div>
+                            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+    </main>
+    <footer class="footer wow zoomIn">
+        <div class="container">
+            <div class="footer-block">
+                <img src="img/logo.svg" alt="logo" class="logo footer-logo">
+                <nav class="footer-nav">
+                    <a href="#kur" class="footer-link">Курьерам</a>
+                    <a href="#rest" class="footer-link">Ресторанам</a>
+                    <a href="#vak" class="footer-link">Вакансии</a>
+                    <a href="#contact" class="footer-link">Контакты</a>
+                </nav>
+                <div class="social-links">
+                    <a href="#" class="social-link"><img src="img/Group 1.svg" alt="instagram"></a>
+                    <a href="#" class="social-link"><img src="img/facebook.svg" alt="facebook"></a>
+                    <a href="#" class="social-link"><img src="img/vk.svg" alt="BK"></a> 
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="modal wow pulse">
+        <div class="modal-dialog">
+            <div class="modal-header">
+                <h3 class="modal-title">Корзина</h3>
+                <button class="close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="foods-row">
+                        <span class="food-name">Ролл угорь стандарт</span>
+                        <strong class="food-price">250₽</strong>
+                        <button class="counter-button">-</button>
+                        <span class="counter">1</span>
+                        <button class="counter-button">+</button>
+                </div>
+                <div class="foods-row">
+                    <span class="food-name">Ролл угорь стандарт</span>
+                    <strong class="food-price">250₽</strong>
+                    <button class="counter-button">-</button>
+                    <span class="counter">1</span>
+                    <button class="counter-button">+</button>
+            </div>
+            <div class="foods-row">
+                <span class="food-name">Ролл угорь стандарт</span>
+                <strong class="food-price">250₽</strong>
+                <button class="counter-button">-</button>
+                <span class="counter">1</span>
+                <button class="counter-button">+</button>
+        </div>
+        <div class="foods-row">
+            <span class="food-name">Ролл угорь стандарт</span>
+            <strong class="food-price">250₽</strong>
+            <button class="counter-button">-</button>
+            <span class="counter">1</span>
+            <button class="counter-button">+</button>
+    </div>
+    <div class="foods-row">
+        <span class="food-name">Ролл угорь стандарт</span>
+        <strong class="food-price">250₽</strong>
+        <button class="counter-button">-</button>
+        <span class="counter">1</span>
+        <button class="counter-button">+</button>
+</div>
+            </div>
+            <div class="modal-footer">
+                <span class="price-tag">1250₽</span>
+                <div class="footer-butttons">
+                    <button class="button button-primary">Оформить заказ</button>
+                    <button class="button" id="otmena">Отмена</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="js\wow.min.js"></script>
+    <script src="js\main.js"></script>
+    <script>
+        $(window).on("load",function(){
+            $(".loader-container").fadeOut(3000);
+        });
+    </script>
+</body>
+</html>
